@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La Cocina de Ñuñoa - Gastronomía Chilena</title>
+    
+    <style>
+        /* Estilos Generales */
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; color: #333; line-height: 1.6; background-color: #fcfaf5; }
+        h1 { color: #8B0000; text-align: center; margin-bottom: 30px; } 
+        h2 { color: #B22222; border-bottom: 2px solid #B22222; padding-bottom: 5px; margin-top: 40px; } 
+        h3 { color: #D2691E; margin-top: 20px; } 
+
+        /* Navegación - Se eliminó el 'sticky' para que se quede arriba */
+        .menu-navegacion { background-color: #f8f4e6; padding: 15px; border-radius: 8px; border: 1px solid #e2d8b8; margin-bottom: 30px; }
+        .menu-navegacion ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 15px; }
+        .menu-navegacion a { color: #006400; font-weight: bold; text-decoration: none; } 
+        .menu-navegacion a:hover { color: #B22222; text-decoration: underline; }
+
+        /* Tablas */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; background: white; }
+        th { background-color: #f2e8c9; text-align: left; padding: 12px; border: 1px solid #ccc; color: #8B0000; }
+        td { padding: 12px; border: 1px solid #ccc; }
+
+        /* Estilos de Formularios Rediseñados */
+        .form-container { 
+            background-color: white; 
+            padding: 25px; 
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 10px 0;
+        }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+        input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+        button { 
+            background-color: #8B0000; 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: bold;
+        }
+        button:hover { background-color: #B22222; }
+
+        /* Sección de Contacto */
+        .info-local { 
+            background-color: #f2e8c9; 
+            padding: 20px; 
+            border-radius: 8px; 
+            margin-bottom: 20px;
+            border-left: 5px solid #8B0000;
+        }
+
+        iframe { display: block; margin: 20px 0; border: 3px solid #f2e8c9; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>La Cocina de Ñuñoa</h1>
+    </header>
+
+    <nav class="menu-navegacion">
+        <h3>Navega por nuestro sitio:</h3>
+        <ul>
+            <li><a href="#quienes-somos">Conoce nuestra historia</a></li>
+            <li><a href="#menu-restaurante">Revisa nuestra carta</a></li>
+            <li><a href="#especialidades">Las sugerencias del chef</a></li>
+            <li><a href="#promociones">Ofertas y descuentos</a></li>
+            <li><a href="#plato-semana">El destacado de la semana</a></li>
+            <li><a href="#videos-relacionados">Videos</a></li>
+            <li><a href="#acceso">Acceso</a></li>
+            <li><a href="#registro">Registro</a></li>
+            <li><a href="#reservas">Contacto y Reservas</a></li>
+        </ul>
+        <br>
+        <p>¿Te interesa conocer la historia detrás de nuestro plato estrella? 
+        <a href="https://es.wikipedia.org/wiki/Empanada" target="_blank">
+            Haz clic aquí para leer sobre el origen de la Empanada en Wikipedia.
+        </a>
+        </p>
+    </nav>
+
+    <section id="quienes-somos">
+        <h2>Quiénes Somos</h2>
+        <p>Nacimos en el corazón del barrio como un emprendimiento familiar con una misión clara: rescatar el auténtico sabor de la comida casera chilena. Nuestro equipo de cocina trabaja a diario con ingredientes frescos de la vega para llevar a tu mesa la tradición y el cariño de las recetas de antaño.</p>
+        <p>Llevamos más de diez años perfeccionando nuestra sazón, logrando que tanto vecinos como turistas disfruten de una verdadera experiencia gastronómica criolla.</p>
+    </section>
+
+    <section id="menu-restaurante">
+        <h2>Nuestra Carta Tradicional</h2>
+        
+        <h3>Platos Fuertes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Plato</th>
+                    <th>Ingredientes Principales</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Charquicán con Huevo Frito</td>
+                    <td>Guiso de papas, zapallo, carne picada, choclo y arvejas.</td>
+                    <td>$5.500</td>
+                </tr>
+                <tr>
+                    <td>Cazuela de Ave</td>
+                    <td>Caldo reconfortante con trutro de pollo, papa, zapallo y porotos verdes.</td>
+                    <td>$6.500</td>
+                </tr>
+                <tr>
+                    <td>Lomo a lo Pobre</td>
+                    <td>Corte de lomo liso acompañado de papas fritas, cebolla y huevo.</td>
+                    <td>$8.900</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Bebidas y Brebajes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bebida</th>
+                    <th>Tamaño</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jugo de Huesillo</td>
+                    <td>Vaso Grande (500ml) sin mote.</td>
+                    <td>$2.000</td>
+                </tr>
+                <tr>
+                    <td>Terremoto Tradicional</td>
+                    <td>Vaso de medio litro con pipeño, helado de piña y fernet.</td>
+                    <td>$4.000</td>
+                </tr>
+                <tr>
+                    <td>Limonada Menta Jengibre</td>
+                    <td>Jarra individual refrescante.</td>
+                    <td>$3.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Postres Caseros</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dulce</th>
+                    <th>Detalle</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arroz con Leche</td>
+                    <td>Toque de canela y cáscara de naranja.</td>
+                    <td>$2.500</td>
+                </tr>
+                <tr>
+                    <td>Mote con Huesillo</td>
+                    <td>Porción tradicional con dos huesillos jugosos.</td>
+                    <td>$3.500</td>
+                </tr>
+                <tr>
+                    <td>Celeste de Manjar</td>
+                    <td>Panqueques rellenos con manjar blanco espolvoreados con azúcar flor.</td>
+                    <td>$3.200</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="especialidades">
+        <h2>Especialidades de la Casa</h2>
+        <dl>
+            <dt><strong>Pastel de Jaiba</strong></dt>
+            <dd>Cremoso chupe horneado en paila de greda, elaborado con carne de jaiba fresca, pan remojado en leche, crema, queso parmesano y un suave toque de vino blanco.</dd>
+            <br>
+            <dt><strong>Costillar Aliñado al Horno</strong></dt>
+            <dd>Costillar de cerdo marinado por 24 horas en ají color, orégano, ajo y vinagre, asado a fuego lento hasta que la carne se desprende del hueso. Se sirve con puré picante.</dd>
+        </dl>
+    </section>
+
+    <section id="promociones">
+        <h2>Promociones Especiales</h2>
+        <ul>
+            <li><strong>Menú Ejecutivo (Lunes a Viernes):</strong> Entrada, plato de fondo, bebida y postre por solo $8.500.</li>
+            <li><strong>Día del Estudiante (Martes):</strong> 15% de descuento presentando tu credencial universitaria.</li>
+            <li><strong>Promo Familiar (Fin de semana):</strong> En la compra de 4 platos fuertes, te regalamos una jarra de bebida natural o limonada.</li>
+        </ul>
+    </section>
+
+    <section id="plato-semana">
+        <h2>Plato de la Semana: Empanada de Pino al Horno</h2>
+        <p>Esta semana queremos rendir homenaje a la reina indiscutible de nuestras Fiestas Patrias y de los domingos familiares: 
+           la <strong>Empanada de Pino</strong>. Nuestra receta destaca por una masa suave y dorada, rellena con un pino de carne de vacuno picada a cuchillo, cebolla cocida a la perfección para evitar la acidez, aceituna de Azapa, pasas corinto y su respectivo cuarto de huevo duro.</p>
+        
+        <p><strong>Empanada de Pino $2500</strong></p>
+        <br>
+        
+        <img src="https://sabordelobueno.com/wp-content/uploads/2021/09/empanadas-pino-vegetariano.jpg" alt="Empanadas de pino cortada por la mitad" width="350">
+        <img src="empanadaaa.jpg" alt="Empanada de pino recién salida del horno" width="350">
+        <br><br>
+        
+        <p>Escucha un pequeño audio de ambiente de cocina tradicional:</p>
+        <audio controls>
+            <source src="cocina.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+
+ <section id="videos-relacionados">
+        <h2>Videos Relacionados</h2>
+        <p>Acompáñanos a la cocina y descubre el secreto de nuestra tradicional receta de Empanadas de Pino, directo desde nuestros hornos de barro:</p>
+        
+        <iframe width="560" height="315" 
+                src="https://www.youtube-nocookie.com/embed/UtByuPhWmsY" 
+                title="Preparación de Empanada de Pino" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>
+        </iframe>
+    </section>
+
+    <section id="acceso">
+        <h2>Acceso de Clientes</h2>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="usuario">Nombre de Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Ej: usuario123" required>
+                </div>
+                <div class="form-group">
+                    <label for="clave">Contraseña:</label>
+                    <input type="password" id="clave" name="clave" required>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="registro">
+        <h2>Registro de Nuevos Usuarios</h2>
+        <p>Regístrate para recibir nuestras promociones especiales y descuentos de fin de semana.</p>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nom_ape">Nombre y Apellido:</label>
+                    <input type="text" id="nom_ape" name="nom_ape" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tipo_doc">Tipo de Documento:</label>
+                    <select id="tipo_doc" name="tipo_doc" required>
+                        <option value="">Seleccione una opción...</option>
+                        <option value="rut">RUT (Chile)</option>
+                        <option value="dni">DNI</option>
+                        <option value="pasaporte">Pasaporte</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="n_doc">Número de Documento:</label>
+                    <input type="text" id="n_doc" name="n_doc" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fnac">Fecha de Nacimiento:</label>
+                    <input type="date" id="fnac" name="fnac" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <input type="radio" id="m" name="sexo" value="m" required> <label style="display:inline;" for="m">Masculino</label>
+                    <input type="radio" id="f" name="sexo" value="f" required> <label style="display:inline;" for="f">Femenino</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="mail_reg">Correo Electrónico:</label>
+                    <input type="email" id="mail_reg" name="mail_reg" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cel">Teléfono Móvil:</label>
+                    <input type="tel" id="cel" name="cel" placeholder="+56 9 XXXX XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="coment">Comentarios o peticiones especiales:</label>
+                    <textarea id="coment" name="coment" rows="4"></textarea>
+                </div>
+
+                <button type="submit">Crear mi cuenta</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="reservas">
+        <h2>Contacto y Reservas</h2>
+        
+        <div class="info-local">
+            <h3>Información del Local</h3>
+            <p><strong>Dirección:</strong> Av. Irarrázaval 1234, Ñuñoa, Santiago.</p>
+            <p><strong>Teléfono:</strong> +56 2 2233 4455</p>
+            <p><strong>Correo:</strong> contacto@lacocinadenunoa.cl</p>
+            <p><strong>Horario de Atención:</strong> Lunes a Sábado: 12:00 - 23:00 | Domingos: 12:00 - 18:00</p>
+        </div>
+
+        <div class="form-container">
+            <h3>Solicitud de Reserva</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="res_nombre">Nombre Completo:</label>
+                    <input type="text" id="res_nombre" name="res_nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="res_mail">Correo Electrónico:</label>
+                    <input type="email" id="res_mail" name="res_mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="res_fecha">Fecha de Reserva:</label>
+                    <input type="date" id="res_fecha" name="res_fecha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="res_solicitud">Detalles de la Solicitud (N° personas, alergias, etc.):</label>
+                    <textarea id="res_solicitud" name="res_solicitud" rows="4" placeholder="Ej: Mesa para 4 personas cerca de la ventana..."></textarea>
+                </div>
+
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
