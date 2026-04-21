@@ -1,0 +1,16 @@
+/* Hoja de estilo para la lista de Promociones Especiales */
+#promociones ul {
+    list-style-type: square;
+    background-color: #fff9e6;
+    padding: 20px 20px 20px 40px;
+    border: 2px dashed #D2691E;
+    border-radius: 8px;
+}
+#promociones li {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #333333;
+}
+#promociones li strong {
+    color: #8B0000;
+}
