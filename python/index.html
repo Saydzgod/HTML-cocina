@@ -7,36 +7,10 @@
     <link rel="stylesheet" type="text/css" href="tablas.css" media="screen" />
     
     <style type="text/css">
-        /* REQUERIMIENTO SEMANA 4: Importación externa para Promociones */
         @import url("promociones.css") screen;
 
-        /* ESTILO INTERNO: Quiénes Somos (Color más vivo y llamativo) */
-        #quienes-somos { 
-            background-color: #f2e8c9; 
-            padding: 30px; 
-            border-radius: 12px; 
-            border: 2px solid #D2691E; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-            margin-bottom: 30px; 
-        }
-        #quienes-somos h2 { 
-            color: #8B0000; 
-            font-size: 30px; 
-            text-transform: uppercase; 
-            text-align: center; 
-            margin-top: 0; 
-            border-bottom: 2px solid #8B0000; 
-            padding-bottom: 10px;
-        }
-        #quienes-somos p { 
-            color: #333333; 
-            font-size: 17px; 
-            text-align: justify; 
-            line-height: 1.8; 
-        }
-
-        /* Estilos Generales de Estructura */
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; color: #333; line-height: 1.6; background-color: #fcfaf5; }
+        /* Estilos Generales y Herencia (Body) */
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; color: #444444; line-height: 1.6; background-color: #fcfaf5; }
         h1 { color: #8B0000; text-align: center; margin-bottom: 30px; } 
         h2 { color: #B22222; border-bottom: 2px solid #B22222; padding-bottom: 5px; margin-top: 40px; } 
         h3 { color: #D2691E; margin-top: 20px; } 
@@ -46,24 +20,40 @@
         .menu-navegacion a { color: #006400; font-weight: bold; text-decoration: none; } 
         .menu-navegacion a:hover { color: #B22222; text-decoration: underline; }
 
+        /* Excepción de Herencia: Quiénes Somos */
+        #quienes-somos { 
+            background-color: #f2e8c9; padding: 30px; border-radius: 12px; border: 2px solid #D2691E; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 30px; 
+        }
+        #quienes-somos h2 { color: #8B0000; font-size: 30px; text-transform: uppercase; text-align: center; margin-top: 0; border-bottom: 2px solid #8B0000; padding-bottom: 10px; }
+        #quienes-somos p { color: #333333; font-size: 17px; text-align: justify; line-height: 1.8; }
+
+        /* MEJORAS SEMANA 5: Formularios y Selectores Avanzados */
         .form-container { 
-            background-color: white; padding: 25px; border: 1px solid #ddd; border-radius: 10px; 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05); max-width: 600px; margin: 10px 0;
+            background-color: #ffffff; border-top: 4px solid #B22222; border-radius: 8px; padding: 30px; 
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.08); max-width: 600px; margin: 15px 0;
         }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; font-weight: bold; margin-bottom: 5px; color: #555; }
+        .form-group { margin-bottom: 18px; }
+        
+        #acceso label, #registro label, #reservas label { 
+            display: block; font-weight: 600; margin-bottom: 8px; color: #8B0000; 
+        }
+        
         input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
-            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; 
+            width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 5px; background-color: #fcfaf5; transition: border-color 0.3s; box-sizing: border-box; 
         }
+        
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+            border-color: #D2691E; outline: none;
+        }
+
         button { 
-            background-color: #8B0000; color: white; padding: 12px 25px; border: none; border-radius: 5px; 
-            cursor: pointer; font-size: 16px; font-weight: bold;
+            background-color: #8B0000; color: white; padding: 14px 28px; border: none; border-radius: 6px; 
+            cursor: pointer; font-size: 16px; font-weight: bold; width: 100%; margin-top: 10px; transition: background 0.3s;
         }
         button:hover { background-color: #B22222; }
 
-        .info-local { 
-            background-color: #f2e8c9; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid #8B0000;
-        }
+        .info-local { background-color: #f2e8c9; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid #8B0000; }
         iframe { display: block; margin: 20px 0; border: 3px solid #f2e8c9; border-radius: 8px; }
     </style>
 </head>
@@ -100,36 +90,27 @@
 
     <section id="menu-restaurante">
         <h2>Nuestra Carta Tradicional</h2>
-        
         <h3>Platos Fuertes</h3>
         <table>
-            <thead>
-                <tr><th>Plato</th><th>Ingredientes Principales</th><th>Valor</th></tr>
-            </thead>
+            <thead><tr><th>Plato</th><th>Ingredientes Principales</th><th>Valor</th></tr></thead>
             <tbody>
                 <tr><td>Charquicán con Huevo Frito</td><td>Guiso de papas, zapallo, carne picada, choclo y arvejas.</td><td>$5.500</td></tr>
                 <tr><td>Cazuela de Ave</td><td>Caldo reconfortante con trutro de pollo, papa, zapallo y porotos verdes.</td><td>$6.500</td></tr>
                 <tr><td>Lomo a lo Pobre</td><td>Corte de lomo liso acompañado de papas fritas, cebolla y huevo.</td><td>$8.900</td></tr>
             </tbody>
         </table>
-
         <h3>Bebidas y Brebajes</h3>
         <table>
-            <thead>
-                <tr><th>Bebida</th><th>Tamaño</th><th>Valor</th></tr>
-            </thead>
+            <thead><tr><th>Bebida</th><th>Tamaño</th><th>Valor</th></tr></thead>
             <tbody>
                 <tr><td>Jugo de Huesillo</td><td>Vaso Grande (500ml) sin mote.</td><td>$2.000</td></tr>
                 <tr><td>Terremoto Tradicional</td><td>Vaso de medio litro con pipeño, helado de piña y fernet.</td><td>$4.000</td></tr>
                 <tr><td>Limonada Menta Jengibre</td><td>Jarra individual refrescante.</td><td>$3.000</td></tr>
             </tbody>
         </table>
-
         <h3>Postres Caseros</h3>
         <table>
-            <thead>
-                <tr><th>Dulce</th><th>Detalle</th><th>Valor</th></tr>
-            </thead>
+            <thead><tr><th>Dulce</th><th>Detalle</th><th>Valor</th></tr></thead>
             <tbody>
                 <tr><td>Arroz con Leche</td><td>Toque de canela y cáscara de naranja.</td><td>$2.500</td></tr>
                 <tr><td>Mote con Huesillo</td><td>Porción tradicional con dos huesillos jugosos.</td><td>$3.500</td></tr>
@@ -201,8 +182,11 @@
                 <div class="form-group"><label for="fnac">Fecha de Nacimiento:</label><input type="date" id="fnac" name="fnac" required></div>
                 <div class="form-group">
                     <label>Sexo:</label>
-                    <input type="radio" id="m" name="sexo" value="m" required> <label style="display:inline;" for="m">Masculino</label>
-                    <input type="radio" id="f" name="sexo" value="f" required> <label style="display:inline;" for="f">Femenino</label>
+                    <div>
+                        <input type="radio" id="m" name="sexo" value="m" required style="width:auto;"> <label style="display:inline; color:#333; font-weight:normal;" for="m">Masculino</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="f" name="sexo" value="f" required style="width:auto;"> <label style="display:inline; color:#333; font-weight:normal;" for="f">Femenino</label>
+                    </div>
                 </div>
                 <div class="form-group"><label for="mail_reg">Correo Electrónico:</label><input type="email" id="mail_reg" name="mail_reg" required></div>
                 <div class="form-group"><label for="cel">Teléfono Móvil:</label><input type="tel" id="cel" name="cel" placeholder="+56 9 XXXX XXXX"></div>
